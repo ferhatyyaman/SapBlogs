@@ -1,0 +1,16 @@
+.categories-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .categories-list li {
+    cursor: pointer;
+    padding: 8px 12px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .categories-list li.active {
+    background-color: #e0e0e0;
+    font-weight: bold;
+  }
+  

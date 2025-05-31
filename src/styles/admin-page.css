@@ -1,0 +1,123 @@
+.admin-layout {
+  display: flex;
+  min-height: 100vh; /* fixed height yerine min-height */
+  font-family: sans-serif;
+}
+
+.admin-sidebar {
+  width: 250px;
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+
+  /* Yüksekliği içerik kadar uzasın */
+  min-height: 100vh;
+
+  /* Çok kategori varsa dikey scroll */
+  overflow-y: auto;
+  position: sticky;  /* Sidebar hep görünür kalsın istersen */
+  top: 0;
+}
+
+.admin-main {
+  flex-grow: 1;
+  padding: 30px;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+  
+  .admin-sidebar h2 {
+    margin-top: 0;
+  }
+  
+  .admin-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  
+  .admin-sidebar li {
+    padding: 8px;
+    margin-bottom: 6px;
+    cursor: pointer;
+    background-color: #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .admin-sidebar li.active {
+    background-color: #444;
+    font-weight: bold;
+  }
+  
+  .admin-sidebar button {
+    background: none;
+    border: none;
+    color: #ff4d4d;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .admin-input-group {
+    margin-top: 20px;
+  }
+  
+  .admin-input-group input {
+    width: calc(100% - 60px);
+    padding: 6px;
+    margin-bottom: 10px;
+  }
+  
+  .admin-input-group button {
+    width: 100%;
+    padding: 6px;
+    background-color: #0080ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .admin-main {
+    flex-grow: 1;
+    padding: 30px;
+    background-color: #f4f4f4;
+  }
+  .blog-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+  }
+  
+  .blog-card {
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .blog-card h3 {
+    margin: 0 0 10px;
+  }
+  
+  .blog-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .blog-actions button {
+    padding: 6px 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #0077ff;
+    color: #fff;
+    border-radius: 4px;
+  }
+  
+  .blog-actions button:last-child {
+    background-color: #d9534f;
+  }
+  

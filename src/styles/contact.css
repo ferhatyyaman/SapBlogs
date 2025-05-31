@@ -1,0 +1,33 @@
+.static-page {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .static-page h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+    border-bottom: 2px solid #2196f3;
+    padding-bottom: 8px;
+  }
+  
+  .static-page p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .static-page a {
+    color: #2196f3;
+    text-decoration: none;
+  }
+  
+  .static-page a:hover {
+    text-decoration: underline;
+  }
+  
