@@ -1,15 +1,48 @@
+.blog-detail-container {
+  display: flex;
+  align-items: flex-start;
+  margin: 40px auto;
+  gap: 40px;
+  padding: 0 20px;
+}
+
 .blog-detail {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .blog-detail h1 {
-    font-size: 2rem;
-    margin-bottom: 16px;
-  }
-  
-  .blog-content {
-    white-space: pre-wrap;
-    line-height: 1.6;
-  }
-  
+  flex: 2;
+  max-width: 1000px;
+  border-right: 1px solid #ccc;
+  padding-right: 30px;
+  box-sizing: border-box;
+  text-align: left; /* İçerik sola yaslı */
+}
+.blog-detail h1 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: #222;
+}
+.blog-content {
+  white-space: pre-wrap;
+  line-height: 1.7;
+  color: #444;
+  font-size: 1rem;
+  text-align: left; /* İçerik sola yaslı */
+}
+/* Sağdaki reklam alanı */
+.blog-ad {
+  max-width: 220px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  font-size: 0.9rem;
+  color: #666;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+  height: fit-content;
+}
+/* İçerikteki img etiketlerine max-width ayarı */
+.blog-content img {
+  max-width: 100%; /* Görsel içerik genişliğini aşmaz */
+  height: auto;
+  display: block;
+  margin: 10px 0; /* Görsellerin üst-alt boşlukları */
+  object-fit: contain;
+}

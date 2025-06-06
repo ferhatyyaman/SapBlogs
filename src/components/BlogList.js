@@ -4,7 +4,13 @@ import { useEffect, useState } from 'react'
 import { collection, getDocs, query, where } from 'firebase/firestore'
 import Link from 'next/link'
 import { db } from '@/firebase/config'
-import '../styles/bloglist.css'
+import '../styles/BlogList.css'
+
+function stripHtmlTags(html) {
+  const div = document.createElement('div')
+  div.innerHTML = html
+  return div.textContent || div.innerText || ''
+}
 
 export default function BlogList({ categoryId }) {
   const [blogs, setBlogs] = useState([])
@@ -26,15 +32,32 @@ export default function BlogList({ categoryId }) {
     fetchBlogs()
   }, [categoryId])
 
-  if (blogs.length === 0) return <p>Bu kategoride blog bulunmamaktadır.</p>
+  if (blogs.length === 0) return <p className="no-blogs">Bu kategoride blog bulunmamaktadır.</p>
 
   return (
-    <ul className="blog-list">
+    <div className="blog-grid">
       {blogs.map(blog => (
-        <li key={blog.id} className="blog-item">
-          <Link href={`/categories/${categoryId}/${blog.id}`}>{blog.title}</Link>
-        </li>
+        <Link
+          key={blog.id}
+          href={`/categories/${categoryId}/${blog.id}`}
+          className="blog-card-link"
+          passHref
+        >
+          <div className="blog-card">
+            <img
+              src={blog.imageUrl || '/image/sap3.jpg'}
+              alt={blog.title}
+              className="blog-image"
+            />
+            <div className="blog-content">
+              <h3 className="blog-title">{blog.title}</h3>
+              <p className="blog-description">
+                {stripHtmlTags(blog.content).substring(0, 100)}...
+              </p>
+            </div>
+          </div>
+        </Link>
       ))}
-    </ul>
+    </div>
   )
 }

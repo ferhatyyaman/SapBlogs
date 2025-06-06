@@ -6,6 +6,7 @@ import { db } from '@/firebase/config'
 import { useRouter, usePathname } from 'next/navigation' // ✅ ekledik
 
 import Header from '@/components/header'
+import Footer from '@/components/Footer'
 import Categories from '@/components/Categories'
 import '../../styles/categories.css'
 
@@ -56,7 +57,7 @@ export default function CategoriesLayout({ children }) {
           />
         </aside>
 
-        <main className="main-content" style={{ flex: 1, padding: 20 }}>
+        <main style={{ flex: 1, padding: 20 }}>
           <CategoryContext.Provider value={selectedCategoryId}>
             {selectedCategoryId ? (
               children
@@ -66,6 +67,7 @@ export default function CategoriesLayout({ children }) {
           </CategoryContext.Provider>
         </main>
       </div>
+      <Footer/>       
     </>
   )
 }
