@@ -6,7 +6,7 @@ import { db } from '@/firebase/config'
 import { useRouter, usePathname } from 'next/navigation' // ✅ ekledik
 
 import Header from '@/components/header'
-import Footer from '@/components/Footer'
+import Footer from '@/components/footer'
 import Categories from '@/components/Categories'
 import '../../styles/categories.css'
 
