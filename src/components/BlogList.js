@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { collection, getDocs, query, where } from 'firebase/firestore'
 import Link from 'next/link'
 import { db } from '@/firebase/config'
-import '../styles/BlogList.css'
+import '../styles/bloglist.css'
 
 function stripHtmlTags(html) {
   const div = document.createElement('div')
