@@ -1,6 +1,6 @@
 'use client'
 import Header from '../components/header'
-import Footer from '../components/Footer'
+import Footer from '../components/footer'
 import Slider from '../components/Slider'
 import '../styles/home.css'
 import { useEffect, useState } from 'react'
