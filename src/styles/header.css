@@ -6,7 +6,6 @@
   background-color: #1f2937; /* koyu gri-mavi */
   color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  box-shadow: 0 2px 8px rgb(0 0 0 / 0.2);
   position: sticky;
   top: 0;
   z-index: 1000;

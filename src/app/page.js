@@ -22,10 +22,10 @@ export default function Home() {
 
   return (
     <>
-      <Header/>
+    <Header />
+    <div className="background-wrapper">
       <main className="main-content">
         <Slider />
-
         <div className="grid-content">
           <h2>Kategoriler</h2>
           <div className="categories-grid">
@@ -40,7 +40,9 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <Footer />
-    </>
+    </div>
+    <Footer />
+  </>
+  
   )
 }
